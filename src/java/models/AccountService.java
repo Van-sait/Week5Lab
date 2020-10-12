@@ -11,36 +11,25 @@ import java.io.Serializable;
  *
  * @author 798382
  */
-public class AccountService implements Serializable {
+public class AccountService {
     
+    /**
+     *
+     * @param username
+     * @param password
+     * @return
+     */
+    public User login(String username, String password){
+        
+        if(username.equals("abe") || username.equals("barb") && (password.equals("password")))
+        {
+            User user = new User(username,password);
+            return user;
+        }
+        return null;
+       
+    }
+
+   
     
-    private String username;
-    private String password;
-
-    public AccountService() {
-    }
-
-    public AccountService(String username, String password) {
-        this.username = username;
-        this.password = password;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = "abe";
-        this.username = "barb";
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = "password";
-    }
-    
-  
 }
