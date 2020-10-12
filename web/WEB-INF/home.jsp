@@ -15,10 +15,9 @@
         <h1>Home Page</h1>
         <form action="login" method="get">
             Hello ${AccountService.username}.
-            <input type="submit" name="action" value="Log out">
-            
+ 
         </form>
-              
+              <a href="login?logout">Log out</a> 
               
     </body>
 </html>
