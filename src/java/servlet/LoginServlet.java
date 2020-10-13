@@ -36,13 +36,13 @@ public class LoginServlet extends HttpServlet {
             request.setAttribute("message", "You have successfully logged out");
             
         }
-        else if(session.getAttribute("user") != null){
+        if(session.getAttribute("user") != null){
             response.sendRedirect("home");
             
         }
-        else{
+       
         getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);  
-        }
+        
         }
 
     @Override
