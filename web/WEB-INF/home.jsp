@@ -13,10 +13,8 @@
     </head>
     <body>
         <h1>Home Page</h1>
-        <form action="home" method="get">
-            Hello ${user.username}.
- 
-        </form>
+        
+            <h2>Hello ${user.username}.</h2>
               <a href="login?logout">Log out</a> 
               
     </body>
